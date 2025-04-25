@@ -1,0 +1,140 @@
+{
+    "products": {
+      "POST /products": {
+        "description": "Membuat produk baru",
+        "request": {
+          "name": "Laptop Asus",
+          "price": 15000000,
+          "categoryId": 1,
+          "supplierId": 1
+        }
+      },
+      "PUT /products/:id": {
+        "description": "Mengupdate produk yang ada",
+        "request": {
+          "name": "Laptop Asus Updated",
+          "price": 16000000,
+          "categoryId": 2,
+          "supplierId": 1
+        }
+      },
+      "GET /products": {
+        "description": "Mendapatkan semua produk",
+        "request": {}
+      },
+      "DELETE /products/:id": {
+        "description": "Menghapus produk",
+        "request": {}
+      }
+    },
+    "categories": {
+      "POST /categories": {
+        "description": "Membuat kategori baru",
+        "request": {
+          "name": "Electronics"
+        }
+      },
+      "PUT /categories/:id": {
+        "description": "Mengupdate kategori",
+        "request": {
+          "name": "Electronics Updated"
+        }
+      },
+      "GET /categories": {
+        "description": "Mendapatkan semua kategori",
+        "request": {}
+      },
+      "GET /categories/:id": {
+        "description": "Mendapatkan kategori berdasarkan ID",
+        "request": {}
+      },
+      "DELETE /categories/:id": {
+        "description": "Menghapus kategori",
+        "request": {}
+      }
+    },
+    "suppliers": {
+      "POST /suppliers": {
+        "description": "Membuat supplier baru",
+        "request": {
+          "name": "PT Maju Jaya",
+          "phone": "08123456789",
+          "email": "supplier@majujaya.com",
+          "address": "Jl. Industri No. 123"
+        }
+      },
+      "PUT /suppliers/:id": {
+        "description": "Mengupdate data supplier",
+        "request": {
+          "name": "PT Maju Jaya Sejahtera",
+          "phone": "08123456789",
+          "email": "supplier@majujaya.com",
+          "address": "Jl. Baru No. 88"
+        }
+      },
+      "GET /suppliers": {
+        "description": "Mendapatkan semua supplier",
+        "request": {}
+      },
+      "GET /suppliers/:id": {
+        "description": "Mendapatkan detail supplier berdasarkan ID",
+        "request": {}
+      },
+      "DELETE /suppliers/:id": {
+        "description": "Menghapus supplier",
+        "request": {}
+      }
+    },
+    "stocks": {
+      "POST /stocks": {
+        "description": "Menambah stok produk",
+        "request": {
+          "productId": 1,
+          "quantity": 10,
+          "type": "in"
+        }
+      },
+      "GET /stocks": {
+        "description": "Mendapatkan semua riwayat stok",
+        "request": {}
+      },
+      "GET /stocks/summary": {
+        "description": "Mendapatkan ringkasan stok",
+        "request": {}
+      },
+      "GET /stocks/:id": {
+        "description": "Mendapatkan riwayat stok berdasarkan ID",
+        "request": {}
+      },
+      "GET /stocks/product/:productId": {
+        "description": "Mendapatkan riwayat stok berdasarkan ID produk",
+        "request": {}
+      }
+    },
+    "transactions": {
+      "POST /transactions": {
+        "description": "Membuat transaksi baru",
+        "request": {
+          "productId": 1,
+          "quantity": 2
+        }
+      },
+      "GET /transactions": {
+        "description": "Mendapatkan semua transaksi",
+        "request": {}
+      },
+      "GET /transactions/summary": {
+        "description": "Mendapatkan ringkasan transaksi",
+        "request": {}
+      },
+      "GET /transactions/:id": {
+        "description": "Mendapatkan transaksi berdasarkan ID",
+        "request": {}
+      },
+      "GET /transactions/product/:productId": {
+        "description": "Mendapatkan transaksi berdasarkan ID produk",
+        "request": {}
+      }
+    }
+  }
+  

@@ -21,6 +21,8 @@ model Product {
   categoryId Int
   stock      Stock[]
   transactions Transaction[]
+  supplier     Supplier?   @relation(fields: [supplierId], references: [id])
+  supplierId   Int?
 }
 
 model Stock {
@@ -39,4 +41,13 @@ model Transaction {
   quantity  Int
   total     Float
   createdAt DateTime @default(now())
+}
+
+model Supplier {
+  id        Int       @id @default(autoincrement())
+  name      String
+  phone     String?   // opsional
+  email     String?   @unique
+  address   String?
+  products  Product[] // Relasi: satu supplier bisa memasok banyak produk
 }

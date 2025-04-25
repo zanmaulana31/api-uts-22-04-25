@@ -4,8 +4,16 @@ const prisma = new PrismaClient();
 exports.create = (data) => prisma.product.create({ data });
 
 exports.getAll = () =>
-  prisma.product.findMany({ include: { category: true, user: true } });
-
+  exports.getAll = () =>
+    prisma.product.findMany({
+      include: {
+        category: true,
+        stock: true,
+        transactions: true,
+        supplier: true
+      }
+    });
+    
 exports.update = (id, data) =>
   prisma.product.update({ where: { id: parseInt(id) }, data });
 

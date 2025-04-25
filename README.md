@@ -16,5 +16,7 @@ Sebuah REST API sederhana untuk aplikasi manajemen barang toko, dibangun dengan 
 git clone https://github.com/zanmaulana31/api-uts-22-04-25.git
 cd api-uts-22-04-25
 npm install
+npx prisma generate
+npx prisma migrate dev
 npm run dev
 ```
