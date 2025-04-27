@@ -122,9 +122,9 @@ const getTransactionSummary = async (req, reply) => {
       })
     );
 
-    res.json(summaryWithDetails);
+    return reply.send(summaryWithDetails);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return reply.code(500).send({ error: error.message });
   }
 };
 
