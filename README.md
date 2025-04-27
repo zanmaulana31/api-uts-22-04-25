@@ -1,13 +1,13 @@
 # Store Management API
 
-Sebuah REST API sederhana untuk aplikasi manajemen barang toko, dibangun dengan Node.js, Express, Prisma, dan MySQL.
+REST API untuk aplikasi manajemen barang toko, dibangun dengan Node.js, Prisma, dan MySQL.
 
 ## Fitur
 
 - CRUD Produk
 - Struktur modular (controller, service, route)
 - Prisma ORM + MySQL
-- Support untuk relasi kategori dan user
+- Support untuk relasi
 
 ## Instalasi
 
